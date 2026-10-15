@@ -1,0 +1,42 @@
+
+name: Docker CI and GHCR Publish
+
+on:
+  push:
+    branches:
+      - main
+      - feature/midterm-2
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-test-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Build PetPal Docker image
+        run: docker build -t petpal:ci .
+
+      - name: Run tests inside Docker
+        run: docker run --rm petpal:ci npm test
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Tag and push Docker image
+        run: |
+          IMAGE="ghcr.io/skit-devops-2026/petpal"
+          docker tag petpal:ci "$IMAGE:latest"
+          docker tag petpal:ci "$IMAGE:${GITHUB_SHA}"
+          docker push "$IMAGE:latest"
+          docker push "$IMAGE:${GITHUB_SHA}"
