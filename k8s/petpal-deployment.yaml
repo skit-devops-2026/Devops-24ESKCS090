@@ -1,0 +1,27 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petpal-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: petpal
+  template:
+    metadata:
+      labels:
+        app: petpal
+    spec:
+      containers:
+        - name: petpal
+          image: petpal:local
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 3
+            periodSeconds: 5
