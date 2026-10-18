@@ -79,7 +79,31 @@ course project. It demonstrates:
 
 ## Live Deployment
 
-_Live URL will be added here once deployed (M6)._
+PetPal is deployed on Render.
+
+Application:
+https://devops-24eskcs090.onrender.com
+
+Health Check:
+https://devops-24eskcs090.onrender.com/health
+
+## Docker Containerization
+
+The application is containerized using Docker and
+Docker Compose.
+
+## Monitoring
+
+Prometheus monitors the PetPal application using
+the /metrics endpoint.
+
+Monitoring configuration and evidence are available
+in the monitoring/ directory.
+
+## Kubernetes
+
+Kubernetes deployment and service manifests are
+available in the k8s/ directory.
 
 ## Author
 

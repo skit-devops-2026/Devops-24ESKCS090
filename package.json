@@ -8,6 +8,7 @@
     "test": "jest --detectOpenHandles"
   },
   "dependencies": {
+    "@prometheus-io/client": "^0.16.1",
     "express": "^4.19.2"
   },
   "devDependencies": {

@@ -1,0 +1,219 @@
+# HELP petpal_process_cpu_user_seconds_total Total user CPU time spent in seconds.
+# TYPE petpal_process_cpu_user_seconds_total counter
+petpal_process_cpu_user_seconds_total 19.984446000000002
+
+# HELP petpal_process_cpu_system_seconds_total Total system CPU time spent in seconds.
+# TYPE petpal_process_cpu_system_seconds_total counter
+petpal_process_cpu_system_seconds_total 5.422032
+
+# HELP petpal_process_cpu_seconds_total Total user and system CPU time spent in seconds.
+# TYPE petpal_process_cpu_seconds_total counter
+petpal_process_cpu_seconds_total 25.406477999999996
+
+# HELP petpal_process_start_time_seconds Start time of the process since unix epoch in seconds.
+# TYPE petpal_process_start_time_seconds gauge
+petpal_process_start_time_seconds 1792326888
+
+# HELP petpal_process_resident_memory_bytes Resident memory size in bytes.
+# TYPE petpal_process_resident_memory_bytes gauge
+petpal_process_resident_memory_bytes 83935232
+
+# HELP petpal_process_virtual_memory_bytes Virtual memory size in bytes.
+# TYPE petpal_process_virtual_memory_bytes gauge
+petpal_process_virtual_memory_bytes 762441728
+
+# HELP petpal_process_heap_bytes Process heap size in bytes.
+# TYPE petpal_process_heap_bytes gauge
+petpal_process_heap_bytes 110170112
+
+# HELP petpal_process_open_fds Number of open file descriptors.
+# TYPE petpal_process_open_fds gauge
+petpal_process_open_fds 20
+
+# HELP petpal_process_max_fds Maximum number of open file descriptors.
+# TYPE petpal_process_max_fds gauge
+petpal_process_max_fds 1048576
+
+# HELP petpal_nodejs_eventloop_lag_seconds Lag of event loop in seconds.
+# TYPE petpal_nodejs_eventloop_lag_seconds gauge
+petpal_nodejs_eventloop_lag_seconds 0.014110767
+
+# HELP petpal_nodejs_eventloop_lag_min_seconds The minimum recorded event loop delay.
+# TYPE petpal_nodejs_eventloop_lag_min_seconds gauge
+petpal_nodejs_eventloop_lag_min_seconds 0.007401472
+
+# HELP petpal_nodejs_eventloop_lag_max_seconds The maximum recorded event loop delay.
+# TYPE petpal_nodejs_eventloop_lag_max_seconds gauge
+petpal_nodejs_eventloop_lag_max_seconds 0.013156351
+
+# HELP petpal_nodejs_eventloop_lag_mean_seconds The mean of the recorded event loop delays.
+# TYPE petpal_nodejs_eventloop_lag_mean_seconds gauge
+petpal_nodejs_eventloop_lag_mean_seconds 0.010257938144838212
+
+# HELP petpal_nodejs_eventloop_lag_stddev_seconds The standard deviation of the recorded event loop delays.
+# TYPE petpal_nodejs_eventloop_lag_stddev_seconds gauge
+petpal_nodejs_eventloop_lag_stddev_seconds 0.0002530713360136841
+
+# HELP petpal_nodejs_eventloop_lag_p50_seconds The 50th percentile of the recorded event loop delays.
+# TYPE petpal_nodejs_eventloop_lag_p50_seconds gauge
+petpal_nodejs_eventloop_lag_p50_seconds 0.010272767
+
+# HELP petpal_nodejs_eventloop_lag_p90_seconds The 90th percentile of the recorded event loop delays.
+# TYPE petpal_nodejs_eventloop_lag_p90_seconds gauge
+petpal_nodejs_eventloop_lag_p90_seconds 0.010436607
+
+# HELP petpal_nodejs_eventloop_lag_p99_seconds The 99th percentile of the recorded event loop delays.
+# TYPE petpal_nodejs_eventloop_lag_p99_seconds gauge
+petpal_nodejs_eventloop_lag_p99_seconds 0.010870783
+
+# HELP petpal_nodejs_eventloop_utilization_summary Ratio of time the event loop is not idling in the event provider to the total time the event loop is running.
+# TYPE petpal_nodejs_eventloop_utilization_summary summary
+petpal_nodejs_eventloop_utilization_summary{quantile="0.01"} 0.0031106982705947635
+petpal_nodejs_eventloop_utilization_summary{quantile="0.05"} 0.00347545360483298
+petpal_nodejs_eventloop_utilization_summary{quantile="0.5"} 0.004784092119847962
+petpal_nodejs_eventloop_utilization_summary{quantile="0.9"} 0.00783923216527039
+petpal_nodejs_eventloop_utilization_summary{quantile="0.95"} 0.010279000534602543
+petpal_nodejs_eventloop_utilization_summary{quantile="0.99"} 0.02310520758805845
+petpal_nodejs_eventloop_utilization_summary{quantile="0.999"} 0.1752651355010878
+petpal_nodejs_eventloop_utilization_summary_sum 132.73908155532555
+petpal_nodejs_eventloop_utilization_summary_count 20558
+
+# HELP petpal_nodejs_eventloop_utilization_histogram Ratio of time the event loop is not idling in the event provider to the total time the event loop is running.
+# TYPE petpal_nodejs_eventloop_utilization_histogram histogram
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.01"} 19735
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.05"} 20410
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.1"} 20521
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.25"} 20553
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.5"} 20555
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.6"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.7"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.75"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.8"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.9"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.95"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="0.99"} 20556
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="1"} 20558
+petpal_nodejs_eventloop_utilization_histogram_bucket{le="+Inf"} 20558
+petpal_nodejs_eventloop_utilization_histogram_sum 132.73908155532555
+petpal_nodejs_eventloop_utilization_histogram_count 20558
+
+# HELP petpal_nodejs_active_resources Number of active resources that are currently keeping the event loop alive, grouped by async resource type.
+# TYPE petpal_nodejs_active_resources gauge
+petpal_nodejs_active_resources{type="FSReqCallback"} 1
+petpal_nodejs_active_resources{type="PipeWrap"} 2
+petpal_nodejs_active_resources{type="TCPServerWrap"} 1
+petpal_nodejs_active_resources{type="TCPSocketWrap"} 1
+petpal_nodejs_active_resources{type="Immediate"} 1
+
+# HELP petpal_nodejs_active_resources_total Total number of active resources.
+# TYPE petpal_nodejs_active_resources_total gauge
+petpal_nodejs_active_resources_total 6
+
+# HELP petpal_nodejs_active_handles Number of active libuv handles grouped by handle type. Every handle type is C++ class name.
+# TYPE petpal_nodejs_active_handles gauge
+petpal_nodejs_active_handles{type="Socket"} 3
+petpal_nodejs_active_handles{type="Server"} 1
+
+# HELP petpal_nodejs_active_handles_total Total number of active handles.
+# TYPE petpal_nodejs_active_handles_total gauge
+petpal_nodejs_active_handles_total 4
+
+# HELP petpal_nodejs_active_requests Number of active libuv requests grouped by request type. Every request type is C++ class name.
+# TYPE petpal_nodejs_active_requests gauge
+petpal_nodejs_active_requests{type="FSReqCallback"} 1
+
+# HELP petpal_nodejs_active_requests_total Total number of active requests.
+# TYPE petpal_nodejs_active_requests_total gauge
+petpal_nodejs_active_requests_total 1
+
+# HELP petpal_nodejs_heap_size_total_bytes Process heap size from Node.js in bytes.
+# TYPE petpal_nodejs_heap_size_total_bytes gauge
+petpal_nodejs_heap_size_total_bytes 20291584
+
+# HELP petpal_nodejs_heap_size_used_bytes Process heap size used from Node.js in bytes.
+# TYPE petpal_nodejs_heap_size_used_bytes gauge
+petpal_nodejs_heap_size_used_bytes 10444864
+
+# HELP petpal_nodejs_external_memory_bytes Node.js external memory size in bytes.
+# TYPE petpal_nodejs_external_memory_bytes gauge
+petpal_nodejs_external_memory_bytes 2397601
+
+# HELP petpal_nodejs_heap_space_size_total_bytes Process heap space size total from Node.js in bytes.
+# TYPE petpal_nodejs_heap_space_size_total_bytes gauge
+petpal_nodejs_heap_space_size_total_bytes{space="read_only"} 0
+petpal_nodejs_heap_space_size_total_bytes{space="new"} 1048576
+petpal_nodejs_heap_space_size_total_bytes{space="old"} 16302080
+petpal_nodejs_heap_space_size_total_bytes{space="code"} 1048576
+petpal_nodejs_heap_space_size_total_bytes{space="shared"} 0
+petpal_nodejs_heap_space_size_total_bytes{space="trusted"} 1622016
+petpal_nodejs_heap_space_size_total_bytes{space="new_large_object"} 0
+petpal_nodejs_heap_space_size_total_bytes{space="large_object"} 270336
+petpal_nodejs_heap_space_size_total_bytes{space="code_large_object"} 0
+petpal_nodejs_heap_space_size_total_bytes{space="shared_large_object"} 0
+petpal_nodejs_heap_space_size_total_bytes{space="trusted_large_object"} 0
+
+# HELP petpal_nodejs_heap_space_size_used_bytes Process heap space size used from Node.js in bytes.
+# TYPE petpal_nodejs_heap_space_size_used_bytes gauge
+petpal_nodejs_heap_space_size_used_bytes{space="read_only"} 0
+petpal_nodejs_heap_space_size_used_bytes{space="new"} 864544
+petpal_nodejs_heap_space_size_used_bytes{space="old"} 7862872
+petpal_nodejs_heap_space_size_used_bytes{space="code"} 833472
+petpal_nodejs_heap_space_size_used_bytes{space="shared"} 0
+petpal_nodejs_heap_space_size_used_bytes{space="trusted"} 625656
+petpal_nodejs_heap_space_size_used_bytes{space="new_large_object"} 0
+petpal_nodejs_heap_space_size_used_bytes{space="large_object"} 262160
+petpal_nodejs_heap_space_size_used_bytes{space="code_large_object"} 0
+petpal_nodejs_heap_space_size_used_bytes{space="shared_large_object"} 0
+petpal_nodejs_heap_space_size_used_bytes{space="trusted_large_object"} 0
+
+# HELP petpal_nodejs_heap_space_size_available_bytes Process heap space size available from Node.js in bytes.
+# TYPE petpal_nodejs_heap_space_size_available_bytes gauge
+petpal_nodejs_heap_space_size_available_bytes{space="read_only"} 0
+petpal_nodejs_heap_space_size_available_bytes{space="new"} 166368
+petpal_nodejs_heap_space_size_available_bytes{space="old"} 8121264
+petpal_nodejs_heap_space_size_available_bytes{space="code"} 149440
+petpal_nodejs_heap_space_size_available_bytes{space="shared"} 0
+petpal_nodejs_heap_space_size_available_bytes{space="trusted"} 965440
+petpal_nodejs_heap_space_size_available_bytes{space="new_large_object"} 1048576
+petpal_nodejs_heap_space_size_available_bytes{space="large_object"} 0
+petpal_nodejs_heap_space_size_available_bytes{space="code_large_object"} 0
+petpal_nodejs_heap_space_size_available_bytes{space="shared_large_object"} 0
+petpal_nodejs_heap_space_size_available_bytes{space="trusted_large_object"} 0
+
+# HELP petpal_nodejs_version_info Node.js version info.
+# TYPE petpal_nodejs_version_info gauge
+petpal_nodejs_version_info{version="v22.23.3",major="22",minor="23",patch="3"} 1
+
+# HELP petpal_nodejs_gc_duration_seconds Garbage collection duration by kind, one of major, minor, incremental or weakcb.
+# TYPE petpal_nodejs_gc_duration_seconds histogram
+petpal_nodejs_gc_duration_seconds_bucket{le="0.001",kind="minor"} 93
+petpal_nodejs_gc_duration_seconds_bucket{le="0.01",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="0.1",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="1",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="2",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="5",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="+Inf",kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_sum{kind="minor"} 0.39619554605335017
+petpal_nodejs_gc_duration_seconds_count{kind="minor"} 281
+petpal_nodejs_gc_duration_seconds_bucket{le="0.001",kind="incremental"} 2
+petpal_nodejs_gc_duration_seconds_bucket{le="0.01",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="0.1",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="1",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="2",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="5",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="+Inf",kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_sum{kind="incremental"} 0.013534480996429921
+petpal_nodejs_gc_duration_seconds_count{kind="incremental"} 5
+petpal_nodejs_gc_duration_seconds_bucket{le="0.001",kind="major"} 0
+petpal_nodejs_gc_duration_seconds_bucket{le="0.01",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_bucket{le="0.1",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_bucket{le="1",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_bucket{le="2",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_bucket{le="5",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_bucket{le="+Inf",kind="major"} 7
+petpal_nodejs_gc_duration_seconds_sum{kind="major"} 0.02485871500521898
+petpal_nodejs_gc_duration_seconds_count{kind="major"} 7
+
+# HELP petpal_http_requests_total Total HTTP requests to PetPal
+# TYPE petpal_http_requests_total counter
+
