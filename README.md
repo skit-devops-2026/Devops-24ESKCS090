@@ -77,12 +77,14 @@ course project. It demonstrates:
 - Kubernetes deployment
 - Application monitoring with Prometheus
 
-## Live Deployment
+## Live URL
+https://devops-24eskcs090.onrender.com
+
+Health Check:
+https://devops-24eskcs090.onrender.com/health
 
 PetPal is deployed on Render.
 
-Application:
-https://devops-24eskcs090.onrender.com
 
 Health Check:
 https://devops-24eskcs090.onrender.com/health
